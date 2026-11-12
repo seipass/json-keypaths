@@ -1,0 +1,21 @@
+[build-system]
+requires = ["setuptools>=61"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "json-keypaths"
+version = "1.0.0"
+description = "Flatten nested JSON objects into sorted dotted key paths."
+readme = "README.md"
+requires-python = ">=3.9"
+license = {file = "LICENSE"}
+authors = [{name = "seipass"}]
+
+[project.scripts]
+json-keypaths = "json_keypaths:main"
+
+[tool.setuptools]
+py-modules = ["json_keypaths"]
+
+[tool.pytest.ini_options]
+pythonpath = ["."]
